@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+<style type="text/css">
+  rect { fill: #39F }
+  .guide {
+    fill: none;
+    stroke: white;
+    stroke-linejoin: round;
+    stroke-width: 2
+  }
+</style>
+  <rect width="256" height="256" rx="56"/>
+  <path class="guide" d="M17 239 239 17"/>
+  <path class="guide" d="m17 17 222 222"/>
+  <path class="guide" d="M0 80h256"/>
+  <path class="guide" d="M0 128h256"/>
+  <path class="guide" d="M0 176h256"/>
+  <rect class="guide" width="222" height="222" x="17" y="17"/>
+  <path class="guide" d="M80 0v256"/>
+  <path class="guide" d="M128 0v256"/>
+  <path class="guide" d="M176 0v256"/>
+  <circle class="guide" cx="128" cy="128" r="48"/>
+  <circle class="guide" cx="128" cy="128" r="68"/>
+  <circle class="guide" cx="128" cy="128" r="111"/>
+</svg>
