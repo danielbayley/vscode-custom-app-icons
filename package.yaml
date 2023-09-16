@@ -80,3 +80,49 @@ dependencies:
 
 babel:
   presets: ["@babel/env"]
+
+scripts:
+  prebuild: pnpm clean
+  build: pnpm /^build.+/ && pnpm bundle
+  build.icon: svg2png *.svg --width 256
+  build.manifest: yaml2json package.y*ml --pretty --save
+  build.coffee: coffee --compile --inline-map *.coffee
+  bundle: >-
+    esbuild $npm_package_main
+    --outfile=$npm_package_main --allow-overwrite
+    --bundle
+    --platform=node
+    --external:vscode
+
+  vscode:prepublish: pnpm build --minify
+  version: |
+    replace-in-file version:\ $npm_{old,new}_version package.yaml
+    [ $RELEASE ] || exit 0
+    git add package.yaml
+    git commit --message $npm_new_version
+
+  prepackage: pnpm build.manifest
+  package: >-
+    vsce package
+    --allow-star-activation
+    --no-dependencies
+    --no-git-tag-version
+    --out $npm_package_name.vsix
+
+  release: RELEASE=true pnpm package
+  postrelease: pnpm /^release.+/
+  release.vsce: vsce publish --packagePath *.vsix
+  release.ovsx: ovsx publish *.vsix
+  release.github: >-
+    github-release upload *.vsix
+    --owner $npm_package_publisher
+    --repo vscode-$npm_package_name
+    --tag v$npm_package_version
+
+  watch: pnpm /^watch.+/
+  watch.icon: chokidar *.svg --command 'pnpm build.icon'
+  watch.manifest: chokidar package.y*ml --command 'pnpm build.manifest'
+  watch.coffee: chokidar *.coffee --command 'pnpm build.coffee'
+  watch.bundle: pnpm bundle --watch
+
+  clean: rm -f *.{png,js*,vsix}
