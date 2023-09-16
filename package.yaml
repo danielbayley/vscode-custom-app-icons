@@ -1,0 +1,82 @@
+# https://code.visualstudio.com/api/references/extension-manifest
+version: 0.0.0
+name: custom-app-icons
+displayName: &name Custom App Icons
+icon: icon.png
+galleryBanner:
+  color: "#5CADFF"
+  theme: dark
+description: Easily replace the VS Code app icon, and associated file icons, with your own from the user settings folder.
+categories:
+- Themes
+keywords:
+- app icon
+- file icons
+- dock
+- desktop
+- start menu
+
+homepage: https://marketplace.visualstudio.com/items?itemName=danielbayley.custom-app-icons
+repository:
+  url: https://github.com/danielbayley/vscode-custom-app-icons
+bugs:
+  url: https://github.com/danielbayley/vscode-custom-app-icon/issues
+  email: daniel.bayley@me.com
+qna: https://github.com/danielbayley/vscode-custom-app-icons/discussions/categories/q-a
+
+author:
+  name: Daniel Bayley
+  email: daniel.bayley@me.com
+  url: https://danielbayley.dev
+
+publisher: danielbayley
+license: MIT
+sponsor:
+  url: https://github.com/sponsors/danielbayley
+
+os:
+- darwin
+- win32
+engines:
+  node: ">=14"
+  vscode: ^1.0.0
+
+private: true
+main: index.js
+
+extensionKind: [ui]
+activationEvents: ["*"]
+
+contributes:
+  configuration:
+    title: *name
+    properties:
+      customAppIcons.path:
+        markdownDescription: |
+          Folder path to `*.`[`icns`]/[`ico`] files.
+          [`icns`]: https://github.com/microsoft/vscode/tree/main/resources/darwin
+          [`ico`]:  https://github.com/microsoft/vscode/tree/main/resources/win32
+        scope: machine
+        type: string
+
+packageManager: ^pnpm@8.7.1
+devDependencies:
+  "@babel/core": ^7.22.11
+  "@babel/preset-env": ^7.22.14
+  "@vscode/vsce": ^2.21.0
+  chokidar-cli: ^3.0.0
+  coffeescript: ^2.7.0
+  esbuild: ^0.19.2
+  github-release-cli: ^2.1.0
+  ovsx: ^0.5.1
+  replace-in-file: ^6.3.5
+  svg2png: ^4.1.1
+  yamljs: ^0.3.0
+
+dependencies:
+  fast-glob: ^3.3.1
+  jszip: ^3.10.0
+  touch: ^3.1.0
+
+babel:
+  presets: ["@babel/env"]
