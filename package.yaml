@@ -97,8 +97,7 @@ scripts:
   version: |
     replace-in-file version:\ $npm_{old,new}_version package.yaml
     [ $RELEASE ] || exit 0
-    git add package.yaml
-    git commit --message $npm_new_version
+    git commit --all --message $npm_new_version
 
   prepackage: pnpm build.manifest
   package: >-
@@ -108,6 +107,7 @@ scripts:
     --no-git-tag-version
     --out $npm_package_name.vsix
 
+  prerelease: git stash --include-untracked --keep-index
   release: RELEASE=true pnpm package
   postrelease: pnpm /^release.+/
   release.vsce: vsce publish --packagePath *.vsix
