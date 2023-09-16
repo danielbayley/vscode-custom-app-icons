@@ -20,7 +20,7 @@ homepage: https://marketplace.visualstudio.com/items?itemName=danielbayley.custo
 repository:
   url: https://github.com/danielbayley/vscode-custom-app-icons
 bugs:
-  url: https://github.com/danielbayley/vscode-custom-app-icon/issues
+  url: https://github.com/danielbayley/vscode-custom-app-icons/issues
   email: daniel.bayley@me.com
 qna: https://github.com/danielbayley/vscode-custom-app-icons/discussions/categories/q-a
 
