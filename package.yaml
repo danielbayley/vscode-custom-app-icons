@@ -53,9 +53,8 @@ contributes:
     properties:
       customAppIcons.path:
         markdownDescription: |
-          Folder path to `*.`[`icns`]/[`ico`] files.
-          [`icns`]: https://github.com/microsoft/vscode/tree/main/resources/darwin
-          [`ico`]:  https://github.com/microsoft/vscode/tree/main/resources/win32
+          Folder path to `*.`[`icns`](https://github.com/microsoft/vscode/tree/main/resources/darwin)
+          /[`ico`](https://github.com/microsoft/vscode/tree/main/resources/win32) files.
         scope: machine
         type: string
 
