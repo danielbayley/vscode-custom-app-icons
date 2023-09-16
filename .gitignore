@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Node/[p]npm
+node_modules/
+*.js*
+
+# VS Code
+.vscode
+*.vsix
