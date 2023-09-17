@@ -7,6 +7,7 @@ import glob from "fast-glob"
 import JSZip from "jszip"
 import touch from "touch"
 
+
 backup = "backup.zip"
 type = "nodebuffer"
 paths =
@@ -14,6 +15,7 @@ paths =
   win32: ["resources/win32", "{ico,png,bmp}"]
 
 [resources, format] = paths[os.platform()]
+
 
 camelCase = (string) =>
   string.toLowerCase()
@@ -23,6 +25,7 @@ exists = (path) =>
   stat path
     .then  => true
     .catch => false
+
 
 process.chdir "#{env.appRoot}/#{resources}"
 
