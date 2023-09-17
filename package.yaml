@@ -120,7 +120,7 @@ scripts:
 
   watch: pnpm /^watch.+/
   watch.icon: chokidar *.svg --command 'pnpm build.icon'
-  watch.manifest: chokidar package.y*ml --command 'pnpm build.manifest'
+  watch.manifest: pnpm build.manifest --watch
   watch.coffee: chokidar *.coffee --command 'pnpm build.coffee'
   watch.bundle: pnpm bundle --watch
 
