@@ -93,6 +93,8 @@ scripts:
     --platform=node
     --external:vscode
 
+  pretest.vscode: yaml2json .vscode --pretty --save
+
   vscode:prepublish: pnpm build --minify
   version: |
     replace-in-file version:\ $npm_{old,new}_version package.yaml

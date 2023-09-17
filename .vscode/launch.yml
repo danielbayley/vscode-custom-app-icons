@@ -1,0 +1,17 @@
+# https://code.visualstudio.com/docs/editor/debugging#_launch-configurations
+# https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_launch-configuration-attributes
+version: 0.2.0
+configurations:
+- name: Run Extension
+  type: extensionHost
+  request: launch
+  args:
+  - ${workspaceFolder}/test/fixtures
+
+# https://code.visualstudio.com/api/working-with-extensions/testing-extension
+- name: Extension Tests
+  type: extensionHost
+  request: launch
+  args:
+  - --extensionDevelopmentPath=${workspaceFolder}
+  - --extensionTestsPath=${workspaceFolder}/test/index.coffee
