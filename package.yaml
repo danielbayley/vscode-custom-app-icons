@@ -1,7 +1,7 @@
 # https://code.visualstudio.com/api/references/extension-manifest
 version: 0.0.3
 name: custom-app-icons
-displayName: &name Custom App Icons
+displayName: &title Custom App Icons
 icon: icon.png
 galleryBanner:
   color: "#5CADFF"
@@ -49,7 +49,7 @@ activationEvents: ["*"]
 
 contributes:
   configuration:
-    title: *name
+    title: *title
     properties:
       customAppIcons.path:
         markdownDescription: |
