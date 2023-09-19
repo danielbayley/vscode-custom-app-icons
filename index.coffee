@@ -2,7 +2,7 @@ import os from "node:os"
 import { readFile, writeFile, copyFile, stat, unlink } from "node:fs/promises"
 import { basename } from "node:path"
 
-import { env, workspace, extensions } from "vscode"
+import { env, workspace, extensions, ExtensionMode } from "vscode"
 import glob from "fast-glob"
 import JSZip from "jszip"
 import touch from "touch"
