@@ -10,7 +10,7 @@ Changes persist across updates and restarts, but are reverted on [`uninstall`].
 ~~~ sh
 code --install-extension danielbayley.custom-app-icons
 ~~~
-This extension is also [available] from the _[Open VSX]_ registry.
+This [extension] is also [available] from the _[Open VSX]_ registry.
 
 Usage
 -----
@@ -26,6 +26,7 @@ License
 [Daniel Bayley]:      https://github.com/danielbayley
 
 [vs code]:            https://code.visualstudio.com
+[extension]:          https://code.visualstudio.com/docs/editor/extension-marketplace
 [settings]:           https://code.visualstudio.com/docs/getstarted/settings
 [user settings]:      https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations
 [`uninstall`]:        https://code.visualstudio.com/docs/editor/extension-marketplace#_uninstall-an-extension
