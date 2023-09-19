@@ -36,7 +36,7 @@ export activate = ({ extension, extensionMode, globalStoragePath }) =>
   { name, version } = extension.packageJSON
   id = "#{extension.id}-#{version}"
 
-  { extensionPath } = if extensionMode is 2
+  { extensionPath } = if extensionMode is ExtensionMode.Development
     extensions.getExtension "vscode.bat"
   else extension
   obsolete = "#{extensionPath}/../.obsolete"
