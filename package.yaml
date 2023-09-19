@@ -1,5 +1,5 @@
 # https://code.visualstudio.com/api/references/extension-manifest
-version: 0.0.5
+version: 0.0.6
 name: custom-app-icons
 displayName: &title Custom App Icons
 icon: icon.png
