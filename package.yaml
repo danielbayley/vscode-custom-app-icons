@@ -124,7 +124,7 @@ scripts:
   watch: pnpm /^watch.+/
   watch.icon: chokidar *.svg --command 'pnpm build.icon'
   watch.manifest: pnpm build.manifest --watch
-  watch.coffee: chokidar *.coffee --command 'pnpm build.coffee'
+  watch.coffee: $npm_package_scripts_build_coffee --watch
   watch.bundle: pnpm bundle --watch
 
   clean: rm -f *.{png,js*,vsix}
