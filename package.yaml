@@ -35,7 +35,7 @@ sponsor:
   url: https://github.com/sponsors/danielbayley
 
 private: true
-main: index.js
+exports: index.js
 
 extensionKind: [ui]
 activationEvents: ["*"]
@@ -87,8 +87,8 @@ scripts:
   build.manifest: yaml2json package.y*ml --pretty --save
   build.coffee: coffee --compile --inline-map *.coffee
   bundle: >-
-    esbuild $npm_package_main
-    --outfile=$npm_package_main --allow-overwrite
+    esbuild   $npm_package_exports_import
+    --outfile=$npm_package_exports_import --allow-overwrite
     --bundle
     --platform=node
     --external:vscode
