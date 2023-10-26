@@ -34,13 +34,6 @@ license: MIT
 sponsor:
   url: https://github.com/sponsors/danielbayley
 
-os:
-- darwin
-- win32
-engines:
-  node: ">=14"
-  vscode: ^1.0.0
-
 private: true
 main: index.js
 
@@ -58,7 +51,14 @@ contributes:
         scope: machine
         type: string
 
+os:
+- darwin
+- win32
+engines:
+  node: ">=14"
+  vscode: ^1.0.0
 packageManager: ^pnpm@8.7.1
+
 devDependencies:
   "@babel/core": ^7.22.11
   "@babel/preset-env": ^7.22.14
