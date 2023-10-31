@@ -1,10 +1,10 @@
 <img src="icon.png" align="right" width="9%">
 
-_[VS Code]_ Custom [App icon]s
+[VS Code] Custom [App Icons]
 ==============================
-Replace the _[Visual Studio Code][vs code]_ app icon, and associated [file icons][`icns`],
-with your own from the [user settings] folder.
-Changes persist across updates and restarts, but are reverted on [`uninstall`].
+Replace the _[Visual Studio Code][vs code]_ app icon, and associated file icons [`*.icns`] with your own from the [user settings] folder.
+
+**Changes persist across updates and restarts, but are reverted on [`uninstall`].**
 
 ## Install
 ~~~ sh
@@ -14,9 +14,15 @@ This [extension] is also [available] from the _[Open VSX]_ registry.
 
 Usage
 -----
-Drop your custom `*.`[`icns`]/[`ico`]/`png`/`bmp` files in an `icons` subfolder of your [user settings],
-or specify an alternative `customAppIcons.path` in the package [settings].
-[File icons][`icns`] will apply to all corresponding files associated with VS Code.
+In the directory of your user settings `~/Library/Application\ Support/Code/User/icons` create a directory called `icons`. Or specify an alternative `customAppIcons.path` in the package [settings].
+~~~
+cd ~/Library/Application\ Support/Code/User/ && mkdir icons && open .
+~~~
+Then, copy your custom [`*.icns`]/[`*.ico`]/`*.png`/`*.bmp` files into the `icons` directory. Once your icon files are in the `icons` directory, name each icon file after the name of the icon file that ships with Visual Studio Code. For example, to change the app icon, rename your custom app icon file to `Code.icns`.
+
+[Here's a complete list] of icon names. File icons will apply to all corresponding files associated with Visual Studio Code.
+
+❗️ _Once you've added all of your custom icons, you may need to restart Visual Studio Code for the the changes to apply._
 
 License
 -------
@@ -34,6 +40,7 @@ License
 [open vsx]:           https://open-vsx.org
 [available]:          https://open-vsx.org/extension/danielbayley/custom-app-icons
 
-[app icon]:           https://github.com/microsoft/vscode/blob/main/resources/darwin/code.icns
-[`icns`]:             https://github.com/microsoft/vscode/tree/main/resources/darwin
-[`ico`]:              https://github.com/microsoft/vscode/tree/main/resources/win32
+[app icons]:           https://github.com/microsoft/vscode/blob/main/resources/darwin/code.icns
+[Here's a complete list]:      https://github.com/microsoft/vscode/tree/main/resources/darwin
+[`*.icns`]:             https://github.com/microsoft/vscode/tree/main/resources/darwin
+[`*.ico`]:              https://github.com/microsoft/vscode/tree/main/resources/win32
