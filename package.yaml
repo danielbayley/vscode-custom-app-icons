@@ -35,7 +35,8 @@ sponsor:
   url: https://github.com/sponsors/danielbayley
 
 private: true
-exports: index.js
+exports: &index index.js
+main: *index
 
 extensionKind: [ui]
 activationEvents: ["*"]
