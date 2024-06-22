@@ -2,9 +2,11 @@
 
 _[VS Code]_ Custom [App icon]s
 ==============================
-Replace the _[Visual Studio Code][vs code]_ app icon, and associated [file icons][`icns`],
+Replace the _[Visual Studio Code][vs code]_ app icon, and associated [file icons][macos],
 with your own from the [user settings] folder.
-Changes persist across updates and restarts, but are reverted on [`uninstall`].
+
+> [!NOTE]
+> Changes persist across updates and restarts, but are reverted on [`uninstall`].
 
 ## Install
 ~~~ sh
@@ -14,9 +16,21 @@ This [extension] is also [available] from the _[Open VSX]_ registry.
 
 Usage
 -----
-Drop your custom `*.`[`icns`]/[`ico`]/`png`/`bmp` files in an `icons` subfolder of your [user settings],
-or specify an alternative `customAppIcons.path` in the package [settings].
-[File icons][`icns`] will apply to all corresponding files associated with VS Code.
+Drop your custom `*.`([`icns`][macos]|[`ico`][windows]|`png`|`bmp`) files in
+an `icons/` directory of your [user settings] folder, or specify an alternative
+`customAppIcons.path` in the package [settings]. For example, on macOS:
+~~~ sh
+VSCODE=Code # or VSCodium
+mkdir -p "$HOME/Library/Application Support/$VSCODE/User/icons" && cp *.icns $_
+~~~
+
+> [!NOTE]
+> You may need to restart VS Code for changes to apply.
+
+> [!TIP]
+> See the complete list of icons for [macOS], [Windows] or [Linux].
+>
+> [File icons][macos] will apply to all corresponding files associated with VS Code.
 
 License
 -------
@@ -35,5 +49,6 @@ License
 [available]:          https://open-vsx.org/extension/danielbayley/custom-app-icons
 
 [app icon]:           https://github.com/microsoft/vscode/blob/main/resources/darwin/code.icns
-[`icns`]:             https://github.com/microsoft/vscode/tree/main/resources/darwin
-[`ico`]:              https://github.com/microsoft/vscode/tree/main/resources/win32
+[macos]:              https://github.com/microsoft/vscode/blob/main/resources/darwin
+[windows]:            https://github.com/microsoft/vscode/tree/main/resources/win32
+[linux]:              https://github.com/microsoft/vscode/tree/main/resources/linux
