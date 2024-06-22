@@ -58,25 +58,25 @@ os:
 engines:
   node: ">=14"
   vscode: ^1.0.0
-packageManager: ^pnpm@8.7.1
+packageManager: pnpm@9.4.0
 
 devDependencies:
-  "@babel/core": ^7.22.11
-  "@babel/preset-env": ^7.22.14
-  "@vscode/vsce": ^2.21.0
+  "@babel/core": ^7.24.7
+  "@babel/preset-env": ^7.24.7
+  "@vscode/vsce": ^2.29.0
   chokidar-cli: ^3.0.0
   coffeescript: ^2.7.0
-  esbuild: ^0.19.2
+  esbuild: ^0.21.5
   github-release-cli: ^2.1.0
-  ovsx: ^0.5.1
-  replace-in-file: ^6.3.5
+  ovsx: ^0.9.1
+  replace-in-file: ^7.2.0
   svg2png: ^4.1.1
   yamljs: ^0.3.0
 
 dependencies:
-  fast-glob: ^3.3.1
-  jszip: ^3.10.0
-  touch: ^3.1.0
+  fast-glob: ^3.3.2
+  jszip: ^3.10.1
+  touch: ^3.1.1
 
 babel:
   presets: ["@babel/env"]
