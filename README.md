@@ -1,10 +1,12 @@
 <img src="icon.png" align="right" width="9%">
 
-[VS Code] Custom [App Icons]
+_[VS Code]_ Custom [App icon]s
 ==============================
-Replace the _[Visual Studio Code][vs code]_ app icon, and associated file icons [`*.icns`] with your own from the [user settings] folder.
+Replace the _[Visual Studio Code][vs code]_ app icon, and associated [file icons][macos],
+with your own from the [user settings] folder.
 
-**Changes persist across updates and restarts, but are reverted on [`uninstall`].**
+> [!NOTE]
+> Changes persist across updates and restarts, but are reverted on [`uninstall`].
 
 ## Install
 ~~~ sh
@@ -14,15 +16,21 @@ This [extension] is also [available] from the _[Open VSX]_ registry.
 
 Usage
 -----
-In the directory of your user settings `~/Library/Application\ Support/Code/User/icons` create a directory called `icons`. Or specify an alternative `customAppIcons.path` in the package [settings].
+Drop your custom `*.`([`icns`][macos]|[`ico`][windows]|`png`|`bmp`) files in
+an `icons/` directory of your [user settings] folder, or specify an alternative
+`customAppIcons.path` in the package [settings]. For example, on macOS:
+~~~ sh
+VSCODE=Code # or VSCodium
+mkdir -p "$HOME/Library/Application Support/$VSCODE/User/icons" && cp *.{icns,png} $_
 ~~~
-cd ~/Library/Application\ Support/Code/User/ && mkdir icons && open .
-~~~
-Then, copy your custom [`*.icns`]/[`*.ico`]/`*.png`/`*.bmp` files into the `icons` directory. Once your icon files are in the `icons` directory, name each icon file after the name of the icon file that ships with Visual Studio Code. For example, to change the app icon, rename your custom app icon file to `Code.icns`.
 
-[Here's a complete list] of icon names. File icons will apply to all corresponding files associated with Visual Studio Code.
+> [!NOTE]
+> You may need to restart VS Code for changes to apply.
 
-❗️ _Once you've added all of your custom icons, you may need to restart Visual Studio Code for the the changes to apply._
+> [!TIP]
+> See the complete list of icons for [macOS], [Windows] or [Linux].
+>
+> [File icons][macos] will apply to all corresponding files associated with VS Code.
 
 License
 -------
@@ -40,7 +48,7 @@ License
 [open vsx]:           https://open-vsx.org
 [available]:          https://open-vsx.org/extension/danielbayley/custom-app-icons
 
-[app icons]:           https://github.com/microsoft/vscode/blob/main/resources/darwin/code.icns
-[Here's a complete list]:      https://github.com/microsoft/vscode/tree/main/resources/darwin
-[`*.icns`]:             https://github.com/microsoft/vscode/tree/main/resources/darwin
-[`*.ico`]:              https://github.com/microsoft/vscode/tree/main/resources/win32
+[app icon]:           https://github.com/microsoft/vscode/blob/main/resources/darwin/code.icns
+[macos]:              https://github.com/microsoft/vscode/blob/main/resources/darwin
+[windows]:            https://github.com/microsoft/vscode/tree/main/resources/win32
+[linux]:              https://github.com/microsoft/vscode/tree/main/resources/linux
