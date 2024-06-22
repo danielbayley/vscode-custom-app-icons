@@ -88,8 +88,8 @@ scripts:
   build.manifest: yaml2json package.y*ml --pretty --save
   build.coffee: coffee --compile --inline-map *.coffee
   bundle: >-
-    esbuild   $npm_package_exports_import
-    --outfile=$npm_package_exports_import --allow-overwrite
+    esbuild   $npm_package_exports
+    --outfile=$npm_package_exports --allow-overwrite
     --bundle
     --platform=node
     --external:vscode
