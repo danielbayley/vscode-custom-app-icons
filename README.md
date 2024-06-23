@@ -1,4 +1,5 @@
-<img src="icon.png" align="right" width="9%">
+<img src="icon.png" width="96vw" align="right">
+<br><br>
 
 _[VS Code]_ Custom [App icon]s
 ==============================
